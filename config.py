@@ -1,3 +1,6 @@
+# There should always be a 'train' and 'eval' folder directly
+# below these given folders
+# Folders should contain all normal and abnormal data files without duplications
 data_folders = [
     '/home/gemeinl/data/normal_abnormal/normalv1.1.1/v1.1.1/edf/',
     '/home/gemeinl/data/normal_abnormal/abnormalv1.1.1/v1.1.1/edf/']
