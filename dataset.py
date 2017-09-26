@@ -183,9 +183,8 @@ class DiagnosisSet(object):
         if self.max_recording_mins is not None:
             assert 'train' == self.train_or_eval
             # Computation as:
-            #lengths = [get_recording_length(fname) for fname in all_file_names]
-            #lengths = np.array(lengths)
-            lengths = np.load('./sorted-recording-lengths.npy')
+            lengths = [get_recording_length(fname) for fname in all_file_names]
+            lengths = np.array(lengths)
             mask = lengths < self.max_recording_mins * 60
             cleaned_file_names = np.array(all_file_names)[mask]
             cleaned_labels = labels[mask]
