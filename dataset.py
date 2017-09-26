@@ -179,8 +179,8 @@ class DiagnosisSet(object):
             train_or_eval=self.train_or_eval,
             folders=self.data_folders,)
 
-        log.info("Read recording lengths...")
         if self.max_recording_mins is not None:
+            log.info("Read recording lengths...")
             assert 'train' == self.train_or_eval
             # Computation as:
             lengths = [get_recording_length(fname) for fname in all_file_names]
