@@ -181,6 +181,7 @@ class DiagnosisSet(object):
 
         log.info("Read recording lengths...")
         if self.max_recording_mins is not None:
+            assert 'train' == self.train_or_eval
             # Computation as:
             #lengths = [get_recording_length(fname) for fname in all_file_names]
             #lengths = np.array(lengths)
