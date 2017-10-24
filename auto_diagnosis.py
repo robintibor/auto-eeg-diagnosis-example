@@ -373,8 +373,12 @@ if __name__ == "__main__":
         log.info("Compute predictions for {:s}...".format(
             setname))
         dataset = exp.datasets[setname]
-        preds_per_batch = [var_to_np(exp.model(np_to_var(b[0]).cuda()))
-                  for b in exp.iterator.get_batches(dataset, shuffle=False)]
+        if cuda:
+            preds_per_batch = [var_to_np(exp.model(np_to_var(b[0]).cuda()))
+                      for b in exp.iterator.get_batches(dataset, shuffle=False)]
+        else:
+            preds_per_batch = [var_to_np(exp.model(np_to_var(b[0])))
+                      for b in exp.iterator.get_batches(dataset, shuffle=False)]
         preds_per_trial = compute_preds_per_trial(
             preds_per_batch, dataset,
             input_time_length=exp.iterator.input_time_length,
