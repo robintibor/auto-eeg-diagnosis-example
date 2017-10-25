@@ -124,8 +124,8 @@ def run_exp(data_folders,
             input_time_length, final_conv_length,
             model_constraint,
             init_lr,
-            batch_size, max_epochs,):
-    cuda = True
+            batch_size, max_epochs,cuda,):
+    
     import torch.backends.cudnn as cudnn
     cudnn.benchmark = True
     preproc_functions = []
@@ -361,7 +361,7 @@ if __name__ == "__main__":
         config.input_time_length, config.final_conv_length,
         config.model_constraint,
         config.init_lr,
-        config.batch_size, config.max_epochs,)
+        config.batch_size, config.max_epochs,config.cuda,)
     end_time = time.time()
     run_time = end_time - start_time
 
@@ -373,7 +373,7 @@ if __name__ == "__main__":
         log.info("Compute predictions for {:s}...".format(
             setname))
         dataset = exp.datasets[setname]
-        if cuda:
+        if config.cuda:
             preds_per_batch = [var_to_np(exp.model(np_to_var(b[0]).cuda()))
                       for b in exp.iterator.get_batches(dataset, shuffle=False)]
         else:
