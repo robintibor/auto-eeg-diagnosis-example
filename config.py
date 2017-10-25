@@ -29,3 +29,4 @@ model_constraint = 'defaultnorm'
 init_lr = 1e-3
 batch_size = 64
 max_epochs = 35 # until first stop, the continue train on train+valid
+cuda = True # False
