@@ -9,4 +9,4 @@
 2. Run with `python ./auto_diagnosis.py`
 
 ## Paper
-The paper is at https://arxiv.org/abs/1708.08012
+The corresponding paper *Deep learning with convolutional neural networks for decoding and visualization of EEG pathology* is at https://arxiv.org/abs/1708.08012
