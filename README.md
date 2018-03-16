@@ -8,5 +8,5 @@
 1. Modify config.py, especially correct data folders for your path..
 2. Run with `python ./auto_diagnosis.py`
 
-## Paper
-The corresponding paper *Deep learning with convolutional neural networks for decoding and visualization of EEG pathology* is at https://arxiv.org/abs/1708.08012
+## Paper / Citation
+The corresponding paper *Deep learning with convolutional neural networks for decoding and visualization of EEG pathology* is at https://arxiv.org/abs/1708.08012 (and now published at http://ieeexplore.ieee.org/document/8257015/ , please cite that version).
