@@ -7,3 +7,6 @@
 ## Run
 1. Modify config.py, especially correct data folders for your path..
 2. Run with `python ./auto_diagnosis.py`
+
+## Paper
+The paper is at https://arxiv.org/abs/1708.08012
